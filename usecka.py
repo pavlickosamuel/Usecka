@@ -15,7 +15,6 @@ if a1 == b1:
     for i in range(a2, b2):
         pixels[a2, i] = (0, 0, 0)
 else:
-    if a1 != b1:
         a = (a2 - b2) / (a1 - b1) 
         b = a2 - a1 * ((a2 - b2) / (a1 - b1))
    
