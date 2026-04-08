@@ -12,8 +12,8 @@ x = 0
 y = 0
 
 if a1 == b1:
-    for i in range(min(a2, b2), max(a2, b2) + 1):
-        pixels[a1, i] = (0, 0, 0)
+    for i in range(a2, b2):
+        pixels[a2, i] = (0, 0, 0)
 else:
     if a1 != b1:
         a = (a2 - b2) / (a1 - b1) 
@@ -25,7 +25,6 @@ if abs(a1 - b1) >= abs(a2 - b2):
         pixels[i, y] = (0, 0, 0)
         for i in range(a2, b2):
             x = int(round((i - b) / a))
-            if 0 <= x < obrazok.width and 0 <= i < obrazok.height:
-                pixels[x, i] = (0, 0, 0)
+            pixels[x, i] = (0, 0, 0)
 
 obrazok.show()
