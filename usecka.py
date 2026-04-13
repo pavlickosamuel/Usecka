@@ -25,5 +25,14 @@ if abs(a1 - b1) >= abs(a2 - b2):
         for i in range(a2, b2):
             x = int(round((i - b) / a))
             pixels[x, i] = (0, 0, 0)
+else:
+    for i in range(a2, b2):
+        x = int(round((i - b) / a))
+        pixels[x, i] = (0, 0, 0)
+        for i in range(a1, b1):
+            y = int(a * i + b)
+            pixels[i, y] = (0, 0, 0)
+    
+     
 
 obrazok.show()
